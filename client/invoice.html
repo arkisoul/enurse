@@ -1,0 +1,726 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Client-Dashboard_Invoice</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap-datepicker3.min.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/mdtimepicker.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <!-- Top Navbar Module -->
+        <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand text-brand" href="#">Logo</a>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button> -->
+
+                <div class="collapse navbar-collapse" id="topNavbar">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="../client/profile.html">Client</a>
+                      <div id="Client-home-menu" class="Hover-home-menu shadow-sm">
+                        <div class="container">
+                          <ul class="nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Fare Estimate</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Cities</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Business</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">How it Works</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Safety</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Airports</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="profile.html">Nurse <span class="sr-only">(current)</span></a>
+                      <div id="Nurse-home-menu" class="Hover-home-menu shadow-sm">
+                        <div class="container">
+                          <ul class="nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Nurse App</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Safety</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Delivery</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Requirements</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Rewards</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Resources</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HELP</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle User-salutaion" href="#" id="userinfo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="../img/user.png" alt="User"> Hi User!
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="userinfo">
+                        <a class="dropdown-item" href="#">Dashboard</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="Overlay-menu-toggle" onclick="toggleOverlay()">
+                  <div id="Overlay-menu-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+            </div>
+        </nav>
+        <!-- ./ Top Navbar Module -->
+        <!-- Overlay-menu -->
+        <div class="Overlay-menu">
+          <div class="container">
+            <div class="Overlay-menu-desktop pt-4">
+              <div class="row pt-4">
+                <div class="col-lg-3 col-sm-6 mb-3">
+                    <nav class="Overlay-nav">
+                        <h5 class="Overlay-nav-title">Client</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Overview</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Fare Estimate</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Cities</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Business</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3">
+                    <nav class="Overlay-nav">
+                        <h5 class="Overlay-nav-title">&nbsp;</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">How it Works</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Safety</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Airports</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3">
+                    <nav class="Overlay-nav">
+                        <h5 class="Overlay-nav-title">Nurse</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Overview</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Nurse App</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Safety</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Delivery</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3">
+                    <nav class="Overlay-nav">
+                        <h5 class="Overlay-nav-title">&nbsp;</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Requirements</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Rewards</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Resources</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+              </div>
+              <div class="row mt-3 border-top py-2">
+                <div class="col-md-6">
+                    <p class="m-0 is-1"><i class="fa fa-map-marker mr-2"></i>
+                    INDORE</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="m-0 is-1"><i class="fa fa-globe mr-2"></i>
+                    ENGLISH</p>
+                </div>
+              </div>
+              <div class="row border-top py-2">
+                <div class="col-12">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <p class="m-0 text-grey is-1">Follow us</p>
+                        <ul class="nav Footer-social-nav ml-3 m-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fa fa-facebook-f"></i></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="Overlay-menu-mobile pt-4">
+              <nav class="Overlay-nav Overlay-nav-mobile">
+                <ul class="nav flex-column">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="ClientNav">Client</a>
+                    <div class="dropdown-menu" aria-labelledby="ClientNav">
+                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Fare Estimate</a>
+                      <a class="dropdown-item" href="#">Cities</a>
+                      <a class="dropdown-item" href="#">Business</a>
+                      <a class="dropdown-item" href="#">How it Works</a>
+                      <a class="dropdown-item" href="#">Safety</a>
+                      <a class="dropdown-item" href="#">Airports</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="NurseNav">Nurse</a>
+                    <div class="dropdown-menu" aria-labelledby="NurseNav">
+                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Nurse App</a>
+                      <a class="dropdown-item" href="#">Safety</a>
+                      <a class="dropdown-item" href="#">Delivery</a>
+                      <a class="dropdown-item" href="#">Requirements</a>
+                      <a class="dropdown-item" href="#">Rewards</a>
+                      <a class="dropdown-item" href="#">Resources</a>
+                    </div>
+                  </li>
+                  <li class="nav-item border-top py-2 pl-2 mt-2">
+                    <p class="m-0 is-1"><i class="fa fa-map-marker mr-2"></i>
+                    INDORE</p>
+                  </li>
+                  <li class="nav-item border-top py-2 pl-2">
+                    <p class="m-0 is-1"><i class="fa fa-globe mr-2"></i>
+                      ENGLISH</p>
+                  </li>
+                  <li class="nav-item border-top border-bottom py-2 pl-2">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <p class="m-0 text-grey is-1">Follow us:</p>
+                      <ul class="nav Footer-social-nav ml-2 m-0">
+                        <li class="nav-item">
+                          <a class="nav-link text-brand ml-2" href="#"><i class="fa fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-brand ml-2" href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-brand ml-2" href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- ./ Overlay-menu -->
+
+        <!-- Client Profile Module -->
+        <section class="Client-profile-module border-top">
+            <div class="container">
+                <!-- <div class="Client-profile-nav-col-toggle p-2 border rounded my-2">
+                    <img src="img/menu.png" alt="Menu" />
+                </div> -->
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 bg-off-white p-0">
+                        <div class="Profile-pic form-group m-0">
+                            <label for="profilepic" class="Profile-file mb-0 d-flex flex-column align-items-center justify-content-center">
+                                <span class="sr-only">Profile Picture</span>
+                                <figure>
+                                    <img src="../img/profile-pic-placeholder.png" alt="Avatar" class="img-fluid rounded-circle" />
+                                </figure>
+                                <input type="file" id="profilepic">
+                            </label>
+                        </div>
+                        <div class="Profile-name">
+                            <h1 class="text-center is-3 text-dark-grey font-weight-light">Lorem Ipsum Client</h1>
+                        </div>
+                        <nav class="Client-Dashboard-menu mt-4">
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link" href="mybookings.html">My Booking</a>
+                              </li>
+                              <li class="nav-item border-top">
+                                <a class="nav-link" href="profile.html">Profile</a>
+                              </li>
+                              <li class="nav-item border-top">
+                                <a class="nav-link" href="#">Change Password</a>
+                              </li>
+                              <li class="nav-item border-top">
+                                <a class="nav-link" href="payment.html">Payment</a>
+                              </li>
+                              <li class="nav-item border-top">
+                                <a class="nav-link" href="rating-review.html">Rating & Review</a>
+                              </li>
+                              <li class="nav-item border-top">
+                                <a class="nav-link active" href="chat.html">Chat</a>
+                              </li>
+                              <li class="nav-item border-top">
+                                <a class="nav-link" href="#">Logout</a>
+                              </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-9 col-md-8">
+                      <div class="Back-block mt-2">
+                        <button class="Back-block text-grey d-flex justify-content-start align-items-center border-0 btn">
+                          <i class="fa fa-long-arrow-left"></i>
+                          <span class="is-1 text-grey ml-2">Back</span>
+                        </button>
+                      </div>
+                      <div class="Client-profile-block shadow rounded border py-3 mt-4 mb-3 ml--md-2">
+                        <h1 class="text-center is-3 mb-4">Invoice</h1>
+                        <div class="Invoice-info">
+                          <div class="Invoice-basic-info d-flex flex-column flex-md-row justify-content-center justify-content--md-between mb-2">
+                            <div class="table-responsive mb-2">
+                              <table class="table-sm Content-table No-strips No-border text-light-grey">
+                                <tbody>
+                                  <tr>
+                                    <td>Invoice ID</td>
+                                    <td>:</td>
+                                    <td>XXXXXXXXX</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Booking ID</td>
+                                    <td>:</td>
+                                    <td>XXXXXXXXX</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Invoice Date</td>
+                                    <td>:</td>
+                                    <td>10 May 2018</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Invoice Duration</td>
+                                    <td>:</td>
+                                    <td>10-15 May 2018</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="table-responsive d-flex justify-content-md-end">
+                              <table class="table-sm Content-table No-strips No-border text-light-grey">
+                                <tbody>
+                                  <tr>
+                                    <td>Nurse Name</td>
+                                    <td>:</td>
+                                    <td>Lorem Ipsum</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Booking Date</td>
+                                    <td>:</td>
+                                    <td>10-13 May 2018</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="table-responsive">
+                            <table class="table Content-table No-strips">
+                              <thead class="thead-grey text-white-50 font-weight-light text-center">
+                                <tr>
+                                  <th scope="col">S. No.</th>
+                                  <th scope="col">Description</th>
+                                  <th scope="col">Date</th>
+                                  <th scope="col">Time</th>
+                                  <th scope="col">Total Hours</th>
+                                  <th scope="col">Rate</th>
+                                  <th scope="col">Amount</th>
+                                </tr>
+                              </thead>
+                              <tbody class="text-center text-light-grey">
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <p class="m-0 text-dark-grey">Lorem Ipsum Nurse</p>
+                                    <p class="m-0">Simple dummy Specialty</p>
+                                  </td>
+                                  <td>10 May 2018</td>
+                                  <td><p class="m-0">09:00 to 14:00</p></td>
+                                  <td>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                  </td>
+                                  <td><p class="m-0">$10.00</p></td>
+                                  <td><p class="m-0">$400.00</p></td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>
+                                    <p class="m-0 text-dark-grey">Lorem Ipsum Nurse</p>
+                                    <p class="m-0">Simple dummy Specialty</p>
+                                  </td>
+                                  <td>10 May 2018</td>
+                                  <td>
+                                    <p class="m-0">09:00 to 14:00</p>
+                                    <p class="m-0">17:00 to 22:00</p>
+                                    <p class="m-0">17:00 to 22:00</p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0">$10.00</p>
+                                    <p class="m-0">$10.00</p>
+                                    <p class="m-0">$10.00</p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0">$400.00</p>
+                                    <p class="m-0">$400.00</p>
+                                    <p class="m-0">$400.00</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <p class="m-0 text-dark-grey">Lorem Ipsum Nurse</p>
+                                    <p class="m-0">Simple dummy Specialty</p>
+                                  </td>
+                                  <td>10 May 2018</td>
+                                  <td><p class="m-0">09:00 to 14:00</p></td>
+                                  <td>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                  </td>
+                                  <td><p class="m-0">$10.00</p></td>
+                                  <td><p class="m-0">$400.00</p></td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>
+                                    <p class="m-0 text-dark-grey">Lorem Ipsum Nurse</p>
+                                    <p class="m-0">Simple dummy Specialty</p>
+                                  </td>
+                                  <td>10 May 2018</td>
+                                  <td>
+                                    <p class="m-0">09:00 to 14:00</p>
+                                    <p class="m-0">17:00 to 22:00</p>
+                                    <p class="m-0">17:00 to 22:00</p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0">$10.00</p>
+                                    <p class="m-0">$10.00</p>
+                                    <p class="m-0">$10.00</p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0">$400.00</p>
+                                    <p class="m-0">$400.00</p>
+                                    <p class="m-0">$400.00</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>
+                                    <p class="m-0 text-dark-grey">Lorem Ipsum Nurse</p>
+                                    <p class="m-0">Simple dummy Specialty</p>
+                                  </td>
+                                  <td>10 May 2018</td>
+                                  <td><p class="m-0">09:00 to 14:00</p></td>
+                                  <td>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                  </td>
+                                  <td><p class="m-0">$10.00</p></td>
+                                  <td><p class="m-0">$400.00</p></td>
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td>
+                                    <p class="m-0 text-dark-grey">Lorem Ipsum Nurse</p>
+                                    <p class="m-0">Simple dummy Specialty</p>
+                                  </td>
+                                  <td>10 May 2018</td>
+                                  <td>
+                                    <p class="m-0">09:00 to 14:00</p>
+                                    <p class="m-0">17:00 to 22:00</p>
+                                    <p class="m-0">17:00 to 22:00</p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                    <p class="m-0 d-flex justify-content-between">
+                                      <span>Day</span>
+                                      <span>- 40.00</span>
+                                    </p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0">$10.00</p>
+                                    <p class="m-0">$10.00</p>
+                                    <p class="m-0">$10.00</p>
+                                  </td>
+                                  <td>
+                                    <p class="m-0">$400.00</p>
+                                    <p class="m-0">$400.00</p>
+                                    <p class="m-0">$400.00</p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <tfoot>
+                                <tr class="bg-off-white">
+                                  <th>&nbsp;</th>
+                                  <th>&nbsp;</th>
+                                  <th>&nbsp;</th>
+                                  <th>&nbsp;</th>
+                                  <th>&nbsp;</th>
+                                  <th>
+                                    <p class="m-0">Total Hours</p>
+                                    <p class="m-0">Total Amount</p>
+                                  </th>
+                                  <th class="text-right">
+                                    <p class="m-0">55.0</p>
+                                    <p class="m-0">$740.00</p>
+                                  </th>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                          <div class="d-flex justify-content-center align-items-center pt-3 pb-2">
+                            <button role="button" class="btn btn-purple" data-toggle="modal" data-target="#logDetail">View Logs</button>
+                            <button role="button" class="btn btn-brand ml-3">Pay Now</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ./ Client Profile Module -->
+
+        <!-- Footer Module -->
+        <footer class="Footer-module bg-black pt-3">
+            <div class="container">
+                <div class="row pb-md-4">
+                    <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="Footer-about-us-block">
+                            <div class="Footer-logo">
+                                <a href="" class="text-brand" style="font-size:2em">LOGO</a>
+                            </div>
+                            <div class="Footer-about-us">
+                                <p class="mb-0 text-white-50 is-1">Suspendisse pulvinar lobortis, dictum venenatis lectus ultrices a. Prasent sit ipsum dui, est efficitur nec.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-3">
+                        <nav class="Footer-nav">
+                            <h5 class="Footer-nav-title">Information</h5>
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">How it works</a>
+                              </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-3">
+                        <nav class="Footer-nav">
+                            <h5 class="Footer-nav-title">Links</h5>
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#">Book an appointment</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Terms &amp; Conditions</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Contact us</a>
+                              </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 mb-3">
+                        <nav class="Footer-nav">
+                            <h5 class="Footer-nav-title">Social Links</h5>
+                            <ul class="nav Footer-social-nav">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#"><i class="fa fa-facebook-f"></i></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+                              </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col">
+                        <p class="text-center mb-0 text-white-50 is-1">Copyright &copy; zus.com 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ./ Footer Module -->
+
+        <!-- Modal Boxes -->
+            <!-- Invoice Log Details Request Modal -->
+            <div class="modal fade Custom-modal" id="logDetail" tabindex="-1" role="dialog" aria-labelledby="rateBookingTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-sm rounded-0" role="document">
+                <div class="modal-content rounded-0">
+                  <div class="modal-header border-bottom-0 rounded-0 justify-content-center align-items-center p-0 text-center">
+                    <h5 class="modal-title is-1-5" id="completeBookingTitle">Log Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">X</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="Logs-Container">
+                      <div class="Log-box">
+                        <p class="text-light-grey mb-0 is-1">10 May 2018, 10.00 AM</p>
+                        <p class="text-grey mb-0 is-1">Proin augue sem, aliquet euismwaod rhawancus at, gravida a felis.</p>
+                      </div>
+                      <div class="Log-box">
+                        <p class="text-light-grey mb-0 is-1">10 May 2018, 10.00 AM</p>
+                        <p class="text-grey mb-0 is-1">Proin augue sem, aliquet euismwaod rhawancus at, gravida a felis.</p>
+                      </div>
+                      <div class="Log-box">
+                        <p class="text-light-grey mb-0 is-1">10 May 2018, 10.00 AM</p>
+                        <p class="text-grey mb-0 is-1">Proin augue sem, aliquet euismwaod rhawancus at, gravida a felis.</p>
+                      </div>
+                      <div class="Log-box">
+                        <p class="text-light-grey mb-0 is-1">10 May 2018, 10.00 AM</p>
+                        <p class="text-grey mb-0 is-1">Proin augue sem, aliquet euismwaod rhawancus at, gravida a felis.</p>
+                      </div>
+                      <div class="Log-box">
+                        <p class="text-light-grey mb-0 is-1">10 May 2018, 10.00 AM</p>
+                        <p class="text-grey mb-0 is-1">Proin augue sem, aliquet euismwaod rhawancus at, gravida a felis.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ./ Invoice Log Details Request Modal -->
+        <!-- ./ Modal Boxes -->
+        <!-- ./ Add your site or application content here -->
+
+        <!-- Scripts -->
+        <script src="../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="../js/vendor/bootstrap.min.js"></script>
+        <script src="../js/vendor/bootstrap-datepicker.min.js"></script>
+        <script src="../js/vendor/mdtimepicker.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="//www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>

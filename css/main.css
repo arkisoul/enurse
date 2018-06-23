@@ -1,0 +1,1394 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+:root {
+    --brand:  #fc5c28;
+    --star-color: #f5b446;
+    --grey-text: #909090;
+    --light-grey-text: #a8a8a8;
+    --grey-dark-text: #5e676c;
+    --bg-light: #f8f8f8;
+    --bg-light-dark: #333333;
+    --bg-dark: #000000;
+    --bg-light-purple: #e7f1f7;
+    --active-color: #1171ba;
+    --sidebar-active-color: #0272b6;
+    --border-color: #eeeeee;
+    --highligh-grey: #e8e8e8;
+    --label-size: 0.8em;
+    --ph-size: 0.75em;
+    --ph-color: #aaaaaa;
+    --label-color: #787878;
+    --thead-grey: #6f6f6f;
+    --chat-light: #707070;
+    --chat-dark: #656565;
+    --chat-active: #383838;
+    --chat-purple: #e7f1f7;
+    --chat-peach: #ffeeea;
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Muli', sans-serif;
+}
+
+body, div, span, table, thead, tbody, tfoot, tr, td, th, ul, ol, li, input, label, textarea, h1, h2, h3, h4, h5, h6, p, dd, dt, dl, strong, em, b, i, section, article, video, audio, main, aside, footer, header, button, a {
+    font-family: 'Muli', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::-moz-placeholder {
+    color: var(--ph-color);
+    font-size: var(--ph-size);
+}
+
+::-webkit-placeholder {
+    color: var(--ph-color);
+    font-size: var(--ph-size);
+}
+
+::-ms-placeholder {
+    color: var(--ph-color);
+    font-size: var(--ph-size);
+}
+
+::placeholder {
+    color: var(--ph-color);
+    font-size: var(--ph-size);
+}
+
+select option:disabled {
+    color: var(--ph-color);
+    font-size: var(--ph-size);
+}
+
+option[value=""][disabled] {
+    display: none;
+    color: var(--ph-color);
+    font-size: var(--ph-size);
+    -webkit-appearance:none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.bg-black {
+    background-color: var(--bg-dark);
+}
+
+.bg-light-black {
+    background-color: var(--bg-light-dark);
+}
+
+.bg-off-white {
+    background-color: var(--bg-light);
+}
+
+.bg-light-purple {
+    background-color: var(--bg-light-purple);
+}
+
+.bg-purple {
+    background-color: var(--active-color);
+}
+
+.bg-brand {
+    background-color: var(--brand);
+}
+
+.thead-grey {
+    background-color: var(--thead-grey);
+}
+
+.text-grey {
+    color: var(--grey-text);
+}
+
+.text-light-grey {
+    color: var(--light-grey-text);
+}
+
+.text-dark-grey {
+    color: var(--grey-dark-text);
+}
+
+.text-brand {
+    color: var(--brand)!important;
+}
+
+.text-star {
+    color: var(--star-color);
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.is--5 {
+    font-size: 0.65em;
+}
+
+.is-1 {
+    font-size: 0.8em;
+}
+
+.is-1-5 {
+    font-size: 1em;
+}
+
+.is-2 {
+    font-size: 1.2em;
+}
+
+.is-3 {
+    font-size: 1.5em;
+}
+
+.btn-brand {
+    background-color: var(--brand);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8em;
+    font-weight: 300;
+    padding: 0.5rem 2rem;
+    transition: color 0.25s linear;
+    border-radius: 0;
+}
+
+.btn-brand:hover, .btn-brand:active, .btn-brand:visited {
+    color: #fff;
+}
+
+.btn-purple {
+    background-color: var(--active-color);
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8em;
+    font-weight: 300;
+    padding: 0.5rem 2rem;
+    transition: color 0.25s linear;
+    border-radius: 0;
+}
+
+.btn-purple:hover, .btn-purple:active, .btn-purple:visited {
+    color: #fff;
+}
+
+.btn-add {
+    width: 25px;
+    height: 25px;
+}
+
+.swiper-slide .btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.swiper-slide .btn-group .btn {
+    flex: 1;
+}
+
+.swiper-slide .btn-group .btn + .btn {
+    margin-left: 1em;
+}
+
+.star-group .fa-star + .fa-star {
+    margin-left: 0.25em;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.w-100p {
+    width: 100px;
+}
+
+.hbg_slct {
+    width: 100%;
+}
+
+.hbg_slct_btn {
+    width: 100% !important;
+    background: #fff !important;
+    color: #888888 !important;
+    border: 1px solid #ced4da !important;
+    text-align: left !important;
+    border-radius: 0;
+    font-size: 0.8em;
+    height: 38px;
+}
+
+.hbg_slct .dropdown-toggle::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-bottom: 1px solid var(--active-color);
+    border-left: 1px solid var(--active-color);
+    border-top: 1px solid transparent;
+    transform: rotate(315deg);
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+
+.dp_sl_btn1_dm {
+    width: 100%;
+}
+
+.dp_sl_btn1_dm.dropdown-menu > li > input[type="radio"], .dp_sl_btn1_dm.dropdown-menu > li > input[type="checkbox"] {
+    display: none;
+    position: absolute;
+    top: -9999em;
+    left: -9999em;
+}
+
+.dp_sl_btn1_dm.dropdown-menu > li > label {
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.dp_sl_btn1_dm.dropdown-menu > li > label {
+    display: block;
+    padding: 5px 10px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.42857143;
+    color: var(--grey-text);
+    white-space: nowrap;
+}
+
+.dp_sl_btn1_dm.dropdown-menu > li > label:hover, .dp_sl_btn1_dm.dropdown-menu > li > label:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--active-color);
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 0.9em;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.Profile-label {
+    color: var(--label-color);
+    font-size: var(--label-size);
+}
+
+.Nurse-profile-module > .container {
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+.Nurse-profile-module .form-control,
+.Nurse-profile-module .custom-select,
+.Client-profile-module .form-control,
+.Client-profile-module .custom-select {
+    border-radius: 0;
+    background-color: #fff;
+}
+
+.Nurse-profile-module .custom-select,
+.Client-profile-module .custom-select {
+    background: #fff url('../img/arrow_down.png') no-repeat right .75rem center;
+}
+
+.Nurse-profile-module .custom-control-label::before,
+.Client-profile-module .custom-control-label::before {
+    background-color: #fff;
+    border-radius: 0;
+    border: 1px solid #dbdbdb;
+}
+
+.Nurse-profile-module .custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+.Client-profile-module .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #fff;
+}
+
+.Nurse-profile-module .custom-checkbox .custom-control-input:checked~.custom-control-label::after,
+.Client-profile-module .custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+    background-image: url('../img/right.png');
+}
+
+#topNavbar > ul > .nav-item {
+    border-top: 3px solid transparent;
+}
+
+#topNavbar > ul > .nav-item.active,
+#topNavbar > ul > .nav-item:active,
+#topNavbar > ul > .nav-item:hover {
+    border-top: 3px solid var(--active-color);
+}
+
+#topNavbar > ul > .nav-item > .nav-link {
+    padding: 0.8em;
+}
+
+#topNavbar .dropdown.show,
+.Filter-box .dropdown.show {
+    background-color: rgba(250, 250, 250, 1.0);
+    border: 1px solid rgba(0,0,0,.15);
+    border-bottom: none;
+}
+
+#topNavbar .dropdown-menu,
+.Filter-box .dropdown-menu {
+    background-color: rgba(250, 250, 250, 1.0);
+    top: 80%;
+    border-top: none;
+    min-width: 100%;
+    border-radius: 0;
+    right: -1px;
+    left: -1px;
+}
+
+#topNavbar .dropdown-menu .dropdown-item,
+.Filter-box .dropdown-menu .dropdown-item {
+    padding: .25rem 0.5rem;
+    font-size: 0.9em;
+}
+
+#topNavbar .dropdown-menu .dropdown-item:hover,
+#topNavbar .dropdown-menu .dropdown-item:active,
+.Filter-box .dropdown-menu .dropdown-item:hover,
+.Filter-box .dropdown-menu .dropdown-item:active {
+    background-color: rgba(232, 232, 232, 1.0);
+}
+
+.Filter-box > .dropdown-toggle::after {
+    border: none;
+    margin: 0;
+}
+
+#nurse-dashboard-menu > ul > .nav-item {
+    border-bottom: 3px solid transparent;
+}
+
+#nurse-dashboard-menu > ul > .nav-item.active,
+#nurse-dashboard-menu > ul > .nav-item:active,
+#nurse-dashboard-menu > ul > .nav-item:hover {
+    border-bottom: 3px solid var(--active-color);
+}
+
+#nurse-dashboard-menu > ul > .nav-item > .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9em;
+    font-weight: 300;
+    padding: 1.2em 0.8em 0.7em;
+}
+
+#nurse-dashboard-menu > ul > .nav-item > .nav-link:hover,
+#nurse-dashboard-menu > ul > .nav-item > .nav-link:active {
+    color: #fff;
+}
+
+#nurse-dashboard-menu > ul > .nav-item.active > .nav-link {
+    color: #fff;
+}
+
+#Nurse-dashboard-nav {
+    margin-top: 55px;
+}
+
+.Client-profile-module {
+    margin-top: 55px;
+}
+
+.Profile-file {
+    cursor: pointer;
+}
+
+.Profile-file > figure {
+    margin: 1em 35px;
+}
+
+.Profile-file > input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.Checkbox-inline-group .custom-control.form-check-inline {
+    flex: 1 1 15%;
+    max-width: 15%;
+}
+
+.Time-picker-wrap, .Date-picker-wrap {
+    position: relative;
+}
+
+.Time-picker-wrap::after,
+.Date-picker-wrap::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+.Time-picker-wrap::after {
+    background: url('../img/clock.png') no-repeat center center scroll;
+}
+
+.Date-picker-wrap::after {
+    background: url('../img/calendar.png') no-repeat center center scroll;
+}
+
+.Footer-nav-title {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.Footer-nav ul .nav-item .nav-link {
+    padding: 0.25em 0;
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 0.3s linear;
+}
+
+.Footer-nav ul .nav-item .nav-link:hover,
+.Footer-nav ul .nav-item .nav-link:active {
+    color: rgba(255, 255, 255, 1.0);
+}
+
+ul.Footer-social-nav .nav-item .nav-link {
+    color: var(--brand);
+    padding: 0.25em 0.25em;
+    font-size: 1em;
+}
+
+.Overlay-nav-title {
+    font-size: 0.9em;
+}
+
+.Overlay-nav ul .nav-item .nav-link {
+    padding: 0.25em 0;
+    font-size: 0.8em;
+    color: var(--grey-text);
+    transition: color 0.3s linear;
+}
+
+.Overlay-nav ul .nav-item .nav-link:hover,
+.Overlay-nav ul .nav-item .nav-link:active {
+    color: #000;
+}
+
+.Overlay-menu-toggle {
+    font-size: 1em;
+    color: var(--grey-text);
+    padding: 8px;
+    cursor: pointer;
+}
+
+.Overlay-menu {
+    position: fixed;
+    top: 43px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #fff;
+    overflow: auto;
+    border-top: 1px solid var(--border-color);
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.Overlay-menu.active {
+    transform: translateY(0);
+}
+
+.Client-Dashboard-menu ul .nav-item .nav-link {
+    font-weight: 300;
+    color: var(--grey-text);
+    transition: background-color 0.45s linear, color 0.35s ease-in;
+}
+
+.Client-Dashboard-menu ul .nav-item .nav-link.active,
+.Client-Dashboard-menu ul .nav-item .nav-link:hover,
+.Client-Dashboard-menu ul .nav-item .nav-link:active {
+    background-color: var(--sidebar-active-color);
+    color: #fff;
+}
+
+.Client-profile-nav-col-toggle {
+    display: none;
+}
+
+.Appointment-tabs .nav-pills .nav-item + .nav-item {
+    margin-left: 2em;
+}
+
+.Appointment-tabs .nav-pills .nav-link {
+    background-color: rgba(252, 252, 252, 1.0);
+    color: var(--grey-text);
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    font-size: 0.9em;
+    font-weight: 300;
+    padding: 1em 2em;
+    transition: background-color 0.4s ease-in, color 0.5s ease-in-out;
+}
+
+.Appointment-tabs .nav-pills.Content-tabs__small .nav-link {
+    padding: 0.25em 1em;
+    font-size: 0.8em;
+}
+
+.Appointment-tabs .nav-pills.Content-tabs__small .nav-item + .nav-item {
+    margin-left: 1em;
+}
+
+.Appointment-tabs .nav-pills .nav-link.active,
+.Appointment-tabs .nav-pills .nav-link:active,
+.Appointment-tabs .nav-pills .nav-link:hover {
+    background-color: var(--sidebar-active-color);
+    color: #fff;
+}
+
+.Content-table td, .Content-table th {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8em;
+}
+
+.Content-table thead th {
+    font-weight: 300;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.Content-table thead td, .Content-table thead td *,
+.Content-table tbody td, .Content-table tbody td *,
+.Content-table tbody th, .Content-table tbody th * {
+    font-weight: 300;
+    vertical-align: middle;
+}
+
+.Content-table tbody td .btn-link, .Content-table tbody th .btn-link {
+    text-decoration: underline;
+    line-height: 1.2;
+    font-size: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.Content-table tbody tr:nth-child(2n) {
+    background-color: var(--bg-light);
+}
+
+.Content-table.No-strips tbody tr:nth-child(2n) {
+    background-color: transparent;
+}
+
+.Content-pagination .page-item .page-link {
+    border: 0;
+    color: var(--grey-text);
+    padding: 0.5rem 0.25rem;
+}
+
+.Content-pagination .page-item:first-child .page-link,
+.Content-pagination .page-item:last-child .page-link {
+    background-color: var(--active-color);
+    color: #fff;
+    padding: 0.5rem 0.75rem;
+    font-size: 1em;
+}
+
+.Content-pagination .page-item:first-child .page-link {
+    margin-right: 1rem;
+}
+
+.Content-pagination .page-item:last-child .page-link {
+    margin-left: 1rem;
+}
+
+.Custom-modal .modal-header {
+    position: relative;
+}
+
+.Custom-modal .modal-header .close {
+    position: absolute;
+    background-color: var(--brand);
+    color: #fff;
+    text-align: center;
+    font-size: 1.3em;
+    opacity: 1;
+    font-weight: 300;
+    border-radius: 50%;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    top: 0px;
+    right: 35px;
+}
+
+.Media-img {
+    flex: 1;
+    max-width: 15%;
+    margin: 0 1em auto auto;
+}
+
+.Rating-summary-box > div {
+    flex: 1;
+    max-width: 45%;
+}
+
+.Rating-box {
+    display: flex;
+    padding: 0.5em 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.Log-box {
+    padding: 0.5em;
+}
+
+.Log-box + .Log-box {
+    border-top: 1px solid var(--border-color);
+}
+
+/* Chat Module */
+.Chat-container {
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-start;
+}
+.Chat-user-block {
+    flex: 1 1 auto;
+    max-width: 30%;
+    border: 1px solid var(--chat-light);
+}
+.Chat-search-box {
+    background-color: var(--chat-light);
+    padding: 0.6em;
+    height: 75px;
+    max-height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.User-container {
+    max-height: 390px;
+    overflow: auto;
+}
+.User-box {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    padding: 0.6em;
+    overflow: hidden;
+    max-height: 65px;
+}
+.User-box:nth-child(1n) {
+    background-color: var(--chat-dark);
+}
+.User-box:nth-child(2n) {
+    background-color: var(--chat-light);
+}
+.User-box.active {
+    background-color: var(--chat-active);
+}
+.User-box.activated {
+    background-color: var(--active-color);
+    height: 75px;
+    max-height: 75px;
+    overflow: visible;
+}
+.User-box > .media-body {
+    overflow: hidden;
+}
+.Chat-user-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 4px 0 0;
+    flex: 1 1 auto;
+    min-width: 40px;
+    max-width: 20%;
+}
+.User-box.activated > .Chat-user-avatar {
+    max-width: 10%;
+}
+.Nurse-profile-module .Chat-user-avatar {
+    max-width: 15%;
+}
+.Nurse-profile-module .User-box.activated > .Chat-user-avatar {
+    max-width: 8%;
+}
+.Chat-chat-block {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 1 1 auto;
+    max-width: 80%;
+    border: 1px solid var(--active-color);
+}
+.Chat-header {
+    height: 75px;
+    max-height: 75px;
+}
+.Chat-body {
+    flex: 1 1 280px;
+    max-height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.Chat-footer {
+    height: 80px;
+    max-height: 80px;
+}
+.Chat-footer .input-group {
+    height: 80px;
+}
+.Chat-more-option .dropdown-toggle::after {
+    border: none;
+    margin: 0;
+}
+/* Chat Bubbles */
+.Chat-bubble-left {
+    position: relative;
+    background: var(--chat-peach);
+    border-radius: .4em;
+    max-width: 65%;
+    margin: 1em auto 1em 2em;
+    padding: 0.6em;
+    max-width: 60%;
+    width: auto;
+    min-width: 35%;
+    font-size: 0.8em;
+    color: var(--light-grey-text);
+}
+
+.Chat-bubble-left::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-right-color: var(--chat-peach);
+    border-left: 0;
+    border-top: 0;
+    margin-top: -5px;
+    margin-left: -15px;
+}
+.Chat-bubble-right {
+    position: relative;
+    background: var(--chat-purple);
+    border-radius: .4em;
+    max-width: 65%;
+    margin: 1em 2em 1em auto;
+    padding: 0.6em;
+    max-width: 60%;
+    width: auto;
+    min-width: 35%;
+    font-size: 0.8em;
+    color: var(--light-grey-text);
+}
+.Chat-bubble-right::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left-color: var(--chat-purple);
+    border-right: 0;
+    border-top: 0;
+    margin-top: -5px;
+    margin-right: -15px;
+}
+.Chat-user-block-togglebar {
+    background-color: #232323;
+    flex: 0 0;
+    min-width: 55px;
+    height: 75px;
+}
+.Chat-user-block-togglebar .toggle i {
+    height: 80px;
+    font-size: 1.4em;
+    width: 100%;
+    color: var(--light-grey-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
+.Chat-user-block-togglebar .toggle i:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Navigation and Overlay Navigation */
+/* Icon 1 */
+
+#Overlay-menu-toggler {
+  width: 35px;
+  height: 37px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#Overlay-menu-toggler span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: var(--grey-text);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+#Overlay-menu-toggler span:nth-child(1) {
+  top: 10px;
+}
+#Overlay-menu-toggler span:nth-child(2) {
+  top: 19px;
+}
+#Overlay-menu-toggler span:nth-child(3) {
+  top: 28px;
+}
+#Overlay-menu-toggler.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+#Overlay-menu-toggler.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+#Overlay-menu-toggler.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.Hover-home-menu {
+    position: fixed;
+    top: 54px;
+    background-color: #fff;
+    padding: 1em;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 999;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    transition-duration: 0.5s;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.Hover-home-menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+.Hover-home-menu .nav > li {
+    flex: 1 1 25%;
+    max-width: 25%;
+}
+.Hover-home-menu .nav > li > a {
+    font-size: 0.9em;
+}
+#topNavbar {
+    transition: all 0.5s ease-in-out;
+}
+#topNavbar.closed {
+    visibility: hidden;
+    opacity: 0;
+}
+.Overlay-nav-mobile.Overlay-nav .nav .nav-item .nav-link {
+    font-size: 1.1em;
+    color: var(--grey-dark-text);
+}
+.Overlay-nav-mobile .dropdown-toggle {
+    position: relative;
+}
+.Overlay-nav-mobile .dropdown-toggle::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-bottom: 1px solid var(--active-color);
+    border-left: 1px solid var(--active-color);
+    border-top: 1px solid transparent;
+    transform: rotate(315deg);
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+.Overlay-nav-mobile .dropdown-menu.show {
+    position: static!important;
+    transform: translate3d(0, 0, 0)!important;
+    will-change: unset!important;
+    border: none;
+    width: 100%;
+}
+.Overlay-nav-mobile .dropdown-menu.show .dropdown-item {
+    font-size: 0.9em;
+    padding: 0.5em 0 0.5em 0.1em;
+    color: var(--grey-text);
+}
+/****** Style Star Rating Widget *****/
+
+.input_rating {
+    border: none;
+    float: left;
+}
+
+.input_rating>input {
+    display: none;
+}
+
+.input_rating>label::before {
+    margin: 0.2rem 0.2rem;
+    font-size: 1rem;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.input_rating>.half::before {
+    content: "\f089";
+    position: absolute;
+}
+
+.input_rating>label {
+    color: #ddd;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.input_rating>input:checked~label,
+/* show gold star when clicked */
+
+.input_rating:not(:checked)>label:hover,
+/* hover current star */
+
+.input_rating:not(:checked)>label:hover~label {
+    color: #f8c53c;
+}
+
+/* hover previous stars in list */
+
+.input_rating>input:checked+label:hover,
+/* hover current star when changing rating */
+
+.input_rating>input:checked~label:hover, .input_rating>label:hover~input:checked~label,
+/* lighten current selection */
+
+.input_rating>input:checked~label:hover~label {
+    color: #f8c53c;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 992px) {
+    .Chat-user-block-togglebar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .Checkbox-inline-group .custom-control.form-check-inline {
+        flex: 1 1 25%;
+        max-width: 20%;
+    }
+    .User-container .User-box > .media-body {
+        display: none;
+        transition-duration: 0.5s;
+    }
+    .Chat-user-block {
+        flex: 0 0;
+        max-width: 55px;
+        transition-duration: 0.5s;
+    }
+    .Chat-user-block.active {
+        flex: 1 1 280px;
+        max-width: 100%;
+    }
+    .Chat-user-block.active .User-container .User-box > .media-body {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .Chat-more-option > .dropdown {
+        width: 25px;
+    }
+    .Overlay-menu-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .cpx-md-2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .Client-profile-nav-col {
+        max-width: 280px;
+        margin-left: -280px;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease-in-out;
+    }
+    .Client-profile-nav-col.active {
+        transform: translateX(0);
+        margin-left: 0;
+        position: absolute;
+        z-index: 11;
+        height: 100%;
+    }
+    .Client-profile-nav-col-toggle {
+        cursor: pointer;
+        display: inline-block;
+    }
+    .Overlay-menu-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .Checkbox-inline-group .custom-control.form-check-inline {
+        flex: 1 1 50%;
+        max-width: 45%;
+    }
+    .Nurse-profile-module > .container {
+        width: 98%;
+    }
+    #Content-tabs {
+        justify-content: center;
+        flex-direction: column;
+    }
+    #Content-tabs.Content-tabs__small {
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    .Appointment-tabs .nav-pills .nav-item {
+        flex: 1;
+        text-align: center;
+    }
+    .Appointment-tabs .nav-pills .nav-item + .nav-item {
+        margin-left: 0em;
+        margin-top: 1em;
+    }
+    .Appointment-tabs .nav-pills.Content-tabs__small .nav-item + .nav-item {
+        margin-left: 0.6em;
+        margin-top: 0em;
+    }
+    .Rating-box {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Media-img {
+        margin: 0 auto 1.5em;
+        max-width: 40%;
+    }
+}
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

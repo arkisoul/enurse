@@ -1,0 +1,758 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Nurse-Dashboard_Profile</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap-datepicker3.min.css">
+        <link rel="stylesheet" href="../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../css/mdtimepicker.css">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <!-- Top Navbar Module -->
+        <nav class="navbar navbar-expand-md navbar-light bg-white py-0 fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand text-brand" href="#">Logo</a>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button> -->
+
+                <div class="collapse navbar-collapse" id="topNavbar">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../client/profile.html">Client</a>
+                      <div id="Client-home-menu" class="Hover-home-menu shadow-sm">
+                        <div class="container">
+                          <ul class="nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Fare Estimate</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Cities</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Business</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">How it Works</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Safety</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Airports</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="profile.html">Nurse <span class="sr-only">(current)</span></a>
+                      <div id="Nurse-home-menu" class="Hover-home-menu shadow-sm">
+                        <div class="container">
+                          <ul class="nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Nurse App</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Safety</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Delivery</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Requirements</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Rewards</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Resources</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">HELP</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle User-salutaion" href="#" id="userinfo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="../img/user.png" alt="User"> Hi User!
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="userinfo">
+                        <a class="dropdown-item" href="#">Dashboard</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="Overlay-menu-toggle" onclick="toggleOverlay()">
+                  <div id="Overlay-menu-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+            </div>
+        </nav>
+        <!-- ./ Top Navbar Module -->
+        <!-- Overlay-menu -->
+        <div class="Overlay-menu">
+          <div class="container">
+            <div class="Overlay-menu-desktop pt-4">
+              <div class="row pt-4">
+                <div class="col-lg-3 col-sm-6 mb-3">
+                    <nav class="Overlay-nav">
+                        <h5 class="Overlay-nav-title">Client</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Overview</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Fare Estimate</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Cities</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Business</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3">
+                    <nav class="Overlay-nav">
+                        <h5 class="Overlay-nav-title">&nbsp;</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">How it Works</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Safety</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Airports</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3">
+                    <nav class="Overlay-nav">
+                        <h5 class="Overlay-nav-title">Nurse</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Overview</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Nurse App</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Safety</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Delivery</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-3">
+                    <nav class="Overlay-nav">
+                        <h5 class="Overlay-nav-title">&nbsp;</h5>
+                        <ul class="nav flex-column">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Requirements</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Rewards</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Resources</a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+              </div>
+              <div class="row mt-3 border-top py-2">
+                <div class="col-md-6">
+                    <p class="m-0 is-1"><i class="fa fa-map-marker mr-2"></i>
+                    INDORE</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="m-0 is-1"><i class="fa fa-globe mr-2"></i>
+                    ENGLISH</p>
+                </div>
+              </div>
+              <div class="row border-top py-2">
+                <div class="col-12">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <p class="m-0 text-grey is-1">Follow us</p>
+                        <ul class="nav Footer-social-nav ml-3 m-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#"><i class="fa fa-facebook-f"></i></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="Overlay-menu-mobile pt-4">
+              <nav class="Overlay-nav Overlay-nav-mobile">
+                <ul class="nav flex-column">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="ClientNav">Client</a>
+                    <div class="dropdown-menu" aria-labelledby="ClientNav">
+                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Fare Estimate</a>
+                      <a class="dropdown-item" href="#">Cities</a>
+                      <a class="dropdown-item" href="#">Business</a>
+                      <a class="dropdown-item" href="#">How it Works</a>
+                      <a class="dropdown-item" href="#">Safety</a>
+                      <a class="dropdown-item" href="#">Airports</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="NurseNav">Nurse</a>
+                    <div class="dropdown-menu" aria-labelledby="NurseNav">
+                      <a class="dropdown-item" href="#">Overview</a>
+                      <a class="dropdown-item" href="#">Nurse App</a>
+                      <a class="dropdown-item" href="#">Safety</a>
+                      <a class="dropdown-item" href="#">Delivery</a>
+                      <a class="dropdown-item" href="#">Requirements</a>
+                      <a class="dropdown-item" href="#">Rewards</a>
+                      <a class="dropdown-item" href="#">Resources</a>
+                    </div>
+                  </li>
+                  <li class="nav-item border-top py-2 pl-2 mt-2">
+                    <p class="m-0 is-1"><i class="fa fa-map-marker mr-2"></i>
+                    INDORE</p>
+                  </li>
+                  <li class="nav-item border-top py-2 pl-2">
+                    <p class="m-0 is-1"><i class="fa fa-globe mr-2"></i>
+                      ENGLISH</p>
+                  </li>
+                  <li class="nav-item border-top border-bottom py-2 pl-2">
+                    <div class="d-flex justify-content-start align-items-center">
+                      <p class="m-0 text-grey is-1">Follow us:</p>
+                      <ul class="nav Footer-social-nav ml-2 m-0">
+                        <li class="nav-item">
+                          <a class="nav-link text-brand ml-2" href="#"><i class="fa fa-facebook-f"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-brand ml-2" href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-brand ml-2" href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <!-- ./ Overlay-menu -->
+        <!-- Nurse Dashboard Menu Module -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-light-black py-md-0" id="Nurse-dashboard-nav">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nurse-dashboard-menu" aria-controls="nurse-dashboard-menu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nurse-dashboard-menu">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="profile.html">Profile <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="change-password.html">Change Password</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="my-appointments.html">My Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="payment-history.html">Payment History</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="rating-review.html">Rating &amp; Review</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="chat.html">Chat</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ./ Nurse Dashboard Menu Module -->
+
+        <!-- Nurse Profile Module -->
+        <section class="Nurse-profile-module">
+            <div class="container mt-3 mb-4 border shadow rounded">
+                <form action="">
+                    <!-- Profile Picture & name -->
+                    <div class="form-row py-3 cpx-md-2">
+                        <div class="col-md-2 col-sm-4">
+                            <div class="Profile-pic form-group m-0">
+                                <label for="profilepic" class="Profile-file mb-0 d-flex justify-content-center">
+                                    <span class="sr-only">Profile Picture</span>
+                                    <figure>
+                                        <img src="../img/profile-pic-placeholder.png" alt="Avatar" class="img-fluid rounded-circle" />
+                                    </figure>
+                                    <input type="file" id="profilepic">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-sm-8 align-self-center">
+                            <div class="Profile-name">
+                                <h1>Lorem Ipsum Nurse</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./ Profile Picture & name -->
+                    <!-- Profile Basic Info -->
+                    <div class="form-row bg-off-white py-3 cpx-md-2">
+                        <div class="offset-md-2 col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group">
+                                <label for="firstname" class="Profile-label">First Name</label>
+                                <input type="text" class="form-control" id="firstname" aria-describedby="First Name" placeholder="Enter First Name">
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group">
+                                <label for="lastname" class="Profile-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastname" aria-describedby="Last Name" placeholder="Enter Last Name">
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group">
+                                <label for="emailaddress" class="Profile-label">Email Address</label>
+                                <input type="email" class="form-control" id="emailaddress" aria-describedby="Email Address" placeholder="Enter Email Address">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group">
+                                <label for="phoneno" class="Profile-label">Phone No.</label>
+                                <input type="text" class="form-control" id="phoneno" aria-describedby="Phone No." placeholder="Enter Phone No.">
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group">
+                                <label for="dateofbirth" class="Profile-label">Date of Birth</label>
+                                <input type="text" class="form-control" id="dateofbirth" aria-describedby="Date of Birth" placeholder="Enter Date of Birth">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group">
+                                <label for="specialties" class="Profile-label">Specialties</label>
+                                <div class="btn-group hbg_slct">
+                                  <button data-toggle="dropdown" class="btn btn-default dropdown-toggle hbg_slct_btn" id="orderfilter">Select</button>
+                                    <ul class="dropdown-menu dp_sl_btn1_dm">
+                                      <li><input type="radio" id="id11f" name="filter" data-val="Zip Code" class="slctss filter" value="zipcode"><label for="id11f">Zip Code</label></li>
+                                      <li class="filter "><input type="radio" id="id12f" name="filter" data-val="City" class="slctss filter" value="city"><label for="id12f">City</label></li>
+                                      <li class="filter "><input type="radio" id="id12pf" name="filter" data-val="Province" class="slctss filter" value="province"><label for="id12pf">Province</label></li>
+                                      <li class="filter "><input type="radio" id="id12cf" name="filter" data-val="Country" class="slctss filter" value="country"><label for="id12cf">Country</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group">
+                                <label for="language" class="Profile-label">Preferred Language</label>
+                                <div class="btn-group hbg_slct">
+                                  <button data-toggle="dropdown" class="btn btn-default dropdown-toggle hbg_slct_btn" id="orderfilter">Select</button>
+                                    <ul class="dropdown-menu dp_sl_btn1_dm">
+                                      <li><input type="radio" id="id11f" name="filter" data-val="Zip Code" class="slctss filter" value="zipcode"><label for="id11f">Zip Code</label></li>
+                                      <li class="filter "><input type="radio" id="id12f" name="filter" data-val="City" class="slctss filter" value="city"><label for="id12f">City</label></li>
+                                      <li class="filter "><input type="radio" id="id12pf" name="filter" data-val="Province" class="slctss filter" value="province"><label for="id12pf">Province</label></li>
+                                      <li class="filter "><input type="radio" id="id12cf" name="filter" data-val="Country" class="slctss filter" value="country"><label for="id12cf">Country</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group">
+                                <label for="pastexperience" class="Profile-label">Past Experience</label>
+                                <input type="text" class="form-control" id="pastexperience" aria-describedby="Past Experience" placeholder="Enter Past Experience">
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-lg-3 col-md-5 col-sm-6">
+                            <div class="form-group mb-0">
+                                <label for="city" class="Profile-label">City</label>
+                                <div class="btn-group hbg_slct">
+                                  <button data-toggle="dropdown" class="btn btn-default dropdown-toggle hbg_slct_btn" id="orderfilter">Select</button>
+                                    <ul class="dropdown-menu dp_sl_btn1_dm">
+                                      <li><input type="radio" id="id11f" name="filter" data-val="Zip Code" class="slctss filter" value="zipcode"><label for="id11f">Zip Code</label></li>
+                                      <li class="filter "><input type="radio" id="id12f" name="filter" data-val="City" class="slctss filter" value="city"><label for="id12f">City</label></li>
+                                      <li class="filter "><input type="radio" id="id12pf" name="filter" data-val="Province" class="slctss filter" value="province"><label for="id12pf">Province</label></li>
+                                      <li class="filter "><input type="radio" id="id12cf" name="filter" data-val="Country" class="slctss filter" value="country"><label for="id12cf">Country</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./ Profile Basic Info -->
+                    <!-- Profile About Us -->
+                    <div class="form-row py-3 cpx-md-2">
+                        <div class="offset-md-2 col-lg-6 col-md-10">
+                            <div class="form-group mb-0">
+                                <label for="aboutus" class="Profile-label">About Us</label>
+                                <textarea class="form-control" id="aboutus" rows="4" placeholder="Tell us something about you"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./ Profile About Us -->
+                    <!-- Profile Calender & Available Time Slots -->
+                    <div class="form-row bg-off-white py-3 cpx-md-2">
+                        <div class="offset-md-2 col"><p class="Profile-label">Calendar & Available time slots</p></div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col">
+                            <div class="form-group mb-0">
+                                <label class="Profile-label">Weekdays</label>
+                            </div>
+                            <div class="Checkbox-inline-group d-flex justify-content-start flex-wrap mb-3">
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="monday" value="option1">
+                                  <label class="custom-control-label Profile-label" for="monday">Monday</label>
+                                </div>
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="tuesday" value="option2">
+                                  <label class="custom-control-label Profile-label" for="tuesday">Tuesday</label>
+                                </div>
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="wednesday" value="option1">
+                                  <label class="custom-control-label Profile-label" for="wednesday">Wednesday</label>
+                                </div>
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="thursday" value="option2">
+                                  <label class="custom-control-label Profile-label" for="thursday">Thursday</label>
+                                </div>
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="friday" value="option1">
+                                  <label class="custom-control-label Profile-label" for="friday">Friday</label>
+                                </div>
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="saturday" value="option2">
+                                  <label class="custom-control-label Profile-label" for="saturday">Saturday</label>
+                                </div>
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="sunday" value="option1">
+                                  <label class="custom-control-label Profile-label" for="sunday">Sunday</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label for="daystarttime" class="Profile-label">Day Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="daystarttime" aria-describedby="Start Time" placeholder="Start Time">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dayendtime" class="Profile-label sr-only">End Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="dayendtime" aria-describedby="End Time" placeholder="End Time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label for="evestarttime" class="Profile-label">Evening Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="evestarttime" aria-describedby="Start Time" placeholder="Start Time">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="eveendtime" class="Profile-label sr-only">End Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="eveendtime" aria-describedby="End Time" placeholder="End Time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label for="nightstarttime" class="Profile-label">Night Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="nightstarttime" aria-describedby="Start Time" placeholder="Start Time">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nightendtime" class="Profile-label sr-only">End Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="nightendtime" aria-describedby="End Time" placeholder="End Time">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./ Profile Calender & Available Time Slots -->
+                    <!-- Unavailable Time Slots -->
+                    <div class="form-row py-3 cpx-md-2">
+                        <div class="offset-md-2 col">
+                            <div class="form-group mb-0">
+                                <label for="" class="Profile-label">Unavailable Time Slots</label>
+                            </div>
+                            <div class="Checkbox-inline-group d-flex justify-content-start flex-wrap mb-3">
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="singleday" value="option1">
+                                  <label class="custom-control-label Profile-label" for="singleday">Single Day</label>
+                                </div>
+                                <div class="custom-control custom-checkbox form-check-inline">
+                                  <input class="custom-control-input" type="checkbox" id="multipleday" value="option2">
+                                  <label class="custom-control-label Profile-label" for="multipleday">Multiple Day</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col">
+                            <div class="form-group mb-0">
+                                <label for="" class="Profile-label">Date</label>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-md-2 col-sm-6">
+                            <div class="form-group">
+                                <label for="startdate" class="Profile-label sr-only">Start Date</label>
+                                <div class="Date-picker-wrap">
+                                    <input type="text" class="form-control Date-picker" id="startdate" aria-describedby="Start Date" placeholder="Start Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6">
+                            <div class="form-group">
+                                <label for="enddate" class="Profile-label sr-only">End Date</label>
+                                <div class="Date-picker-wrap">
+                                    <input type="text" class="form-control Date-picker" id="enddate" aria-describedby="End Date" placeholder="End Date">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label for="daystarttime" class="Profile-label">Day Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="daystarttime" aria-describedby="Start Time" placeholder="Start Time">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dayendtime" class="Profile-label sr-only">End Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="dayendtime" aria-describedby="End Time" placeholder="End Time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label for="evestarttime" class="Profile-label">Evening Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="evestarttime" aria-describedby="Start Time" placeholder="Start Time">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="eveendtime" class="Profile-label sr-only">End Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="eveendtime" aria-describedby="End Time" placeholder="End Time">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <div class="form-group">
+                                <label for="nightstarttime" class="Profile-label">Night Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="nightstarttime" aria-describedby="Start Time" placeholder="Start Time">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nightendtime" class="Profile-label sr-only">End Time</label>
+                                <div class="Time-picker-wrap">
+                                    <input type="text" class="form-control Time-picker" id="nightendtime" aria-describedby="End Time" placeholder="End Time">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ./ Unavailable Time Slots -->
+                    <!-- Rate Card -->
+                    <div class="form-row bg-off-white py-3 cpx-md-2">
+                        <div class="offset-md-2 col"><p class="Profile-label">Hourly Charges / Hourly Rate Card</p></div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-md-2 col-sm-4">
+                            <label for="dayrate" class="Profile-label">Day</label>
+                            <input type="text" class="form-control" id="dayrate" aria-describedby="Day Rate" placeholder="Enter Rate Here">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label for="everate" class="Profile-label">Evening</label>
+                            <input type="text" class="form-control" id="everate" aria-describedby="Evening Rate" placeholder="Enter Rate Here">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label for="nightrate" class="Profile-label">Night</label>
+                            <input type="text" class="form-control" id="nightrate" aria-describedby="Night Rate" placeholder="Enter Rate Here">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label for="weekendrate" class="Profile-label">Weekend</label>
+                            <input type="text" class="form-control" id="weekendrate" aria-describedby="Weekend Rate" placeholder="Enter Rate Here">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label for="holidayrate" class="Profile-label">Holidays</label>
+                            <input type="text" class="form-control" id="holidayrate" aria-describedby="Holiday Rate" placeholder="Enter Rate Here">
+                        </div>
+                        <div class="offset-md-2 col"><p class="Profile-label mt-3">Hourly Rate plus irregularity allowance(in % percentage)</p></div>
+                        <div class="w-100"></div>
+                        <div class="offset-md-2 col-md-2 col-sm-4">
+                            <label for="dayrate" class="Profile-label">Day</label>
+                            <input type="text" class="form-control" id="dayrate" aria-describedby="Day Rate" placeholder="Enter Rate (%) Here">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label for="everate" class="Profile-label">Evening</label>
+                            <input type="text" class="form-control" id="everate" aria-describedby="Evening Rate" placeholder="Enter Rate (%) Here">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label for="nightrate" class="Profile-label">Night</label>
+                            <input type="text" class="form-control" id="nightrate" aria-describedby="Night Rate" placeholder="Enter Rate (%) Here">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label for="weekendrate" class="Profile-label">Weekend</label>
+                            <input type="text" class="form-control" id="weekendrate" aria-describedby="Weekend Rate" placeholder="Enter Rate (%) Here">
+                        </div>
+                        <div class="col-md-2 col-sm-4">
+                            <label for="holidayrate" class="Profile-label">Holidays</label>
+                            <input type="text" class="form-control" id="holidayrate" aria-describedby="Holiday Rate" placeholder="Enter Rate (%) Here">
+                        </div>
+                    </div>
+                    <!-- ./ Rate Card -->
+                    <!-- Submit Button -->
+                    <div class="row py-3 cpx-md-2">
+                        <div class="offset-md-2 col-10 text-center">
+                            <button type="submit" class="btn btn-brand">Save</button>
+                        </div>
+                    </div>
+                    <!-- ./ Submit Button -->
+                </form>
+            </div>
+        </section>
+        <!-- ./ Nurse Profile Module -->
+
+        <!-- Footer Module -->
+        <footer class="Footer-module bg-black pt-3">
+            <div class="container">
+                <div class="row pb-md-4">
+                    <div class="col-lg-4 col-sm-6 mb-3">
+                        <div class="Footer-about-us-block">
+                            <div class="Footer-logo">
+                                <a href="" class="text-brand" style="font-size:2em">LOGO</a>
+                            </div>
+                            <div class="Footer-about-us">
+                                <p class="mb-0 text-white-50 is-1">Suspendisse pulvinar lobortis, dictum venenatis lectus ultrices a. Prasent sit ipsum dui, est efficitur nec.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-3">
+                        <nav class="Footer-nav">
+                            <h5 class="Footer-nav-title">Information</h5>
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">How it works</a>
+                              </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-3">
+                        <nav class="Footer-nav">
+                            <h5 class="Footer-nav-title">Links</h5>
+                            <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#">Book an appointment</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Terms &amp; Conditions</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Contact us</a>
+                              </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-2 col-sm-6 mb-3">
+                        <nav class="Footer-nav">
+                            <h5 class="Footer-nav-title">Social Links</h5>
+                            <ul class="nav Footer-social-nav">
+                              <li class="nav-item">
+                                <a class="nav-link active" href="#"><i class="fa fa-facebook-f"></i></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+                              </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="row py-2">
+                    <div class="col">
+                        <p class="text-center mb-0 text-white-50 is-1">Copyright &copy; zus.com 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ./ Footer Module -->
+        <!-- ./ Add your site or application content here -->
+
+        <!-- Scripts -->
+        <script src="../js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="../js/vendor/bootstrap.min.js"></script>
+        <script src="../js/vendor/bootstrap-datepicker.min.js"></script>
+        <script src="../js/vendor/mdtimepicker.js"></script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="//www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
